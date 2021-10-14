@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='boardstyle.css') }}">
+    
+    <title>Test Game Web</title>
+
+  </head>
+  <body>
+    <h1> Cross Game </h1>
+    <a href="{{url_for('choose', mode = 'AI')}}">One Player (AI Opponent)</a>
+    <a href="{{url_for('choose', mode = 'Human')}}">Two Player</a>
+
+  </body>
+</html>

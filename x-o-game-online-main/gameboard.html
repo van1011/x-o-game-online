@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='boardstyle.css') }}">
+    
+    <title>Test Game Web</title>
+
+  </head>
+  <body>
+    <h1> Gameboard </h1>
+    <form action = '#' method = 'POST'>
+    {%for box in board%}
+      {% if box == 0 %}
+        <button name="box" value="{{loop.index0}}">__</button>
+      {%elif box == 1%}
+        <button name="box" value="{{loop.index0}}">X</button>
+      {%elif box == 2%}
+        <button name="box" value="{{loop.index0}}">O</button>
+      {% endif %}
+    {%endfor%}
+    {{message}}
+    </form>
+  </body>
+</html>
